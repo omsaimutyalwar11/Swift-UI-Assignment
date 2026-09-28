@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct BlogAppApp: App {
+
+    @State private var viewModel = ArticleViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Feed()
+            .environment(viewModel)
         }
     }
 }
